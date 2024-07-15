@@ -7,7 +7,7 @@
    
 ```
   $ cd
-  $ mkir catkin_ws
+  $ mkdir catkin_ws
 ```
 
 2. Create The Source Folder: 
@@ -16,6 +16,7 @@
     $ cd catkin_ws/
     $ mkdir src
     $ catkin_make
+    $ source devel/setup.bash
   ```
 
 3. Source Catkin Workspace: 
