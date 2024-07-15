@@ -4,6 +4,11 @@
    
 1. Open a **Terminal** & Create the Workspace Directory: : 
    > Ctrl + Alt + T
+```
+  $ source /opt/ros/noetic/setup.bash
+  $ echo $ROS_DISTRO
+```
+  - The output should be "noetic".
    
 ```
   $ cd
