@@ -2,7 +2,7 @@
 
 ## 1. Create ROS1 Noetic Workspace:
    
-1. Open a **Terminal** & Create the Workspace Directory: : 
+1. Open a **Terminal** & Source the ROS 1 Noetic & Create the Workspace Directory: 
    > Ctrl + Alt + T
 ```
   $ source /opt/ros/noetic/setup.bash
@@ -15,7 +15,7 @@
   $ mkdir catkin_ws
 ```
 
-2. Create The Source Folder: 
+2. Create The Source Folder & Build the Workspace:  
 
   ```
     $ cd catkin_ws/
@@ -39,47 +39,46 @@
 
 ## 2. Create ROS 2 Foxy Workspace:
 
-1. Open a new Terminal & Source the ROS 2 Foxy:
+1. Open a new Terminal & Source the ROS 2 Foxy & Create the Workspace Directory::
 ```
   $ source /opt/ros/foxy/setup.bash
   $ echo $ROS_DISTRO
 ```
   - The output should be "foxy".
+   
+```
+  $ cd
+  $ mkdir ros2_ws
+```
 
-3. Create the ROS 2 workspace directory structure & Initialize the Workspace::
+2. Create The Source Folder:
+
   ```
-   $ mkdir -p ros2_ws/src
-   $ ros2 pkg create --build-type ament_cmake my_package_cpp --dependencies rclcpp
-```
+    $ cd ros2_ws/
+    $ mkdir src
+  ```
 
-4. Open a new Terminal & Initialize the Workspace:
-```
-   $ source /opt/ros/foxy/setup.bash
-   $ cd ros2_ws/src/
-   $ ros2 pkg create --build-type ament_python my_package_py 
-```
-  - This will create two new packages in the src directory of your workspace.
- 
-5. Build the ROS 2 workspace:
-   - run this in the First Terminal:
-```
-  $ cd ..
-  $ colcon build
-```
+3. Install _colcon_:
 
-6. Source the workspace :
-```
-  $ source install/setup.bash
-```
+   ```
+   $ sudo apt update
+   $ sudo apt install python3-colcon-common-extensions
+   ```
 
-  - Go to the seconed Terminal and source it as well:
-```
-  $ cd ..
-  $ source install/setup.bash
-```
-  - This will set up the necessary environment variables for your ROS 2 Foxy workspace.
+4. Build the Workspace: 
 
+   ```
+   $ cd ~/ros2_ws/
+   $ colcon build
+   $ source install/local_setup.bash
+   ```
 
+5. Source  Workspace: 
+
+ ```
+   $ cd ~/ros2_ws/install/
+   $ source setup.bash  
+  ```
 
 ***
 
