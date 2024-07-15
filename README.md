@@ -1,6 +1,6 @@
 # ROS1 Bridge
 
-The ``ros1_bridge`` package allows you to map topics, services, and actions between ROS 1 and ROS 2, enabling seamless communication and integration between the two ROS distributions. This is particularly useful when you have existing ROS 1 code that you want to leverage in a ROS 2 environment or when you need to integrate ROS 1 and ROS 2 components in a single system.
+The ``ros1_bridge`` package allows you to map topics, services, and actions between ROS 1 and ROS 2, enabling seamless communication and integration between the two ROS distributions. This is particularly useful when you have existing ROS 1 code that you want to leverage in a ROS 2 environment or when you need to integrate ROS1 and ROS2 components in a single system.
 
 
 ***
