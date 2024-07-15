@@ -1,4 +1,9 @@
-# ROS1-Bridge
+# ROS1 Bridge
+
+***
+
+# Creating ROS1 Noetic and ROS2 Foxy Workspaces
+
 
 ## 1. Create ROS1 Noetic Workspace:
    
@@ -85,7 +90,7 @@
 
 
 # Arduino Robot Arm Project:
-
+we will be working on [Arduino Robot Arm](https://github.com/smart-methods/arduino_robot_arm).
 
 ## 1. Install Arduino Robot Arm Aackage in ROS Noetic:
 
@@ -143,15 +148,7 @@
    $ cd ~/ros1_bridge_ws/src
    $ git clone -b foxy https://github.com/ros2/ros1_bridge.git
 ```
-   - Noetic Distro:
-```
- $ cd catkin_ws
- $ sudo apt install python3-rosdep2
- $ sudo apt-get install ros-noetic-moveit
- $ sudo apt-get install ros-noetic-joint-state-publisher ros-noetic-joint-state-publisher-gui
- $ sudo apt-get install ros-noetic-gazebo-ros-control joint-state-publisher
- $ sudo apt-get install ros-noetic-ros-controllers ros-noetic-ros-control
-```
+ 
 
 3.  Build the ROS1 Bridge Package:
 ```
@@ -179,37 +176,51 @@
 
    - _If Error Encountered_:
 ```
-   Install python3-colcon-common-extensions and python3-ament-package:
-   sudo apt update
-   sudo apt install python3-colcon-common-extensions python3-ament-package
+   $ Install python3-colcon-common-extensions and python3-ament-package:
+   $ sudo apt update
+   $ sudo apt install python3-colcon-common-extensions python3-ament-package
 ```
 
    - Rebuild the ros1_bridge:
 ```
-   cd ~/ros1_bridge_ws
-   colcon build --packages-select ros1_bridge --cmake-force-configure --cmake-args -DBUILD_TESTING=FALSE
+   $ cd ~/ros1_bridge_ws
+   $ colcon build --packages-select ros1_bridge --cmake-force-configure --cmake-args -DBUILD_TESTING=FALSE
 ```
 
 
 5. Test the bridge:
 ```
-   source install/local_setup.bash
-   ros2 run ros1_bridge dynamic_bridge --print-pairs
+   $ cd
+   $ source install/local_setup.bash
+   $ ros2 run ros1_bridge dynamic_bridge --print-pairs
 ```
 
-6. Launch the Arduino_robot_arm package:
+6. Open a New **Terminal** & Source:
 ```
-   source /opt/ros/noetic/setup.bash
-   source ~/catkin_ws/devel/setup.bash
-   roslaunch robot_arm_pkg check_motors.launch
-   rostopic list
+  $ source /opt/ros/noetic/setup.bash
+  $ source ~/catkin_ws/devel/setup.bashash
+```
+   
+   - Launch the Arduino_robot_arm package:
+```
+   $ roslaunch robot_arm_pkg check_motors.launch
 ```
 
+   - You should see this:
+ <img src="https://github.com/user-attachments/assets/b874fdaa-0ffe-4bb0-af24-a2bf2659360e" width="600" height="230">
 
+
+7. Open a New **Terminal** & run:
+```
+   $ rostopic list
+```
+   - To View all ROS nodes that are currently running in the ROS environment.
+
+     
 ***
 
 
-## 3. Running ros1_bridge
+# Running ROS 1 Bridge:
 
 After launching the check_motors.launch file and have the robot arm running in ROS1, you need to set up the ros1_bridge and run it to ensure communication between ROS1 and ROS2.
 
