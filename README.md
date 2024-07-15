@@ -2,7 +2,7 @@
 
 ***
 
-# Creating ROS1 Noetic and ROS2 Foxy Workspaces
+# Creating ROS1 and ROS2 Workspaces
 
 
 ## 1. Create ROS1 Noetic Workspace:
