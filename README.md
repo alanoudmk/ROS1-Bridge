@@ -106,17 +106,6 @@
  $ sudo apt-get install ros-noetic-moveit
 ```
 
-   - Noetic Distro:
-```
- $ cd catkin_ws
- $ sudo apt install python3-rosdep2
- $ sudo apt-get install ros-noetic-moveit
- $ sudo apt-get install ros-noetic-joint-state-publisher ros-noetic-joint-state-publisher-gui
- $ sudo apt-get install ros-noetic-gazebo-ros-control joint-state-publisher
- $ sudo apt-get install ros-noetic-ros-controllers ros-noetic-ros-control
-```
-
-
 -(If Error Encountered ): Rebuild the Workspace 
 
 ```
@@ -141,14 +130,30 @@
 
 ## 2. Create and Set Up ros1_bridge Workspace:
 
-1. Create the Workspace:
+1. Open a **Terminal** & Source:
 ```
+  $ source /opt/ros/noetic/setup.bash
+  $ source /opt/ros/foxy/setup.bash
+```
+    
+2. Create the Workspace:
+```
+   $ cd
    $ mkdir -p ~/ros1_bridge_ws/src
    $ cd ~/ros1_bridge_ws/src
    $ git clone -b foxy https://github.com/ros2/ros1_bridge.git
 ```
+   - Noetic Distro:
+```
+ $ cd catkin_ws
+ $ sudo apt install python3-rosdep2
+ $ sudo apt-get install ros-noetic-moveit
+ $ sudo apt-get install ros-noetic-joint-state-publisher ros-noetic-joint-state-publisher-gui
+ $ sudo apt-get install ros-noetic-gazebo-ros-control joint-state-publisher
+ $ sudo apt-get install ros-noetic-ros-controllers ros-noetic-ros-control
+```
 
-2.  Build the ROS1 Bridge Package:
+3.  Build the ROS1 Bridge Package:
 ```
    $ cd ~/ros1_bridge_ws
    $ colcon build --packages-select ros1_bridge --cmake-force-configure --cmake-args -DBUILD_TESTING=FALSE
@@ -156,7 +161,7 @@
 ```
 
 
-3. Source ROS1 and ROS2:
+4. Source ROS1 and ROS2:
    
    - Ensure All Required ROS 2 Packages are Installed:
 ```
@@ -186,13 +191,13 @@
 ```
 
 
-4. Test the bridge:
+5. Test the bridge:
 ```
    source install/local_setup.bash
    ros2 run ros1_bridge dynamic_bridge --print-pairs
 ```
 
-5. Launch the Arduino_robot_arm package:
+6. Launch the Arduino_robot_arm package:
 ```
    source /opt/ros/noetic/setup.bash
    source ~/catkin_ws/devel/setup.bash
