@@ -84,7 +84,7 @@
 
 
 
-# Arduino Robot Arm Project
+# Arduino Robot Arm Project:
 
 
 ## 1. Install Arduino Robot Arm Aackage in ROS Noetic:
@@ -100,7 +100,13 @@
     
 
 
-2. Dependencies (noetic distro):
+2. Dependencies:
+   - Install moveit_ros_planning:
+```
+ $ sudo apt-get install ros-noetic-moveit
+```
+
+   - Noetic Distro:
 ```
  $ cd catkin_ws
  $ sudo apt install python3-rosdep2
@@ -111,7 +117,7 @@
 ```
 
 
--(If encountered an error): Rebuild the Workspace 
+-(If Error Encountered ): Rebuild the Workspace 
 
 ```
    $ cd ~/catkin_ws
