@@ -224,17 +224,21 @@ we will be working on [Arduino Robot Arm](https://github.com/smart-methods/ardui
 
 After launching the check_motors.launch file and have the robot arm running in ROS1, you need to set up the ros1_bridge and run it to ensure communication between ROS1 and ROS2.
 
-1. Open a **Terminal** & run this:
+1. Open a **Terminal** & run:
    > Ctrl + Alt + T
 ```
+   $ source /opt/ros/noetic/setup.bash
+   $ source ~/catkin_ws/devel/setup.bash
+   $ cd  ros1_bridge_ws/
    $ source install/setup.bash
    $ ros2 run ros1_bridge dynamic_bridge
 ```
+   - Bridge is Created.
 
-2. Echo /joint_states topic in ROS2:
+2. Open a **Terminal** & Echo /joint_states topic in ROS2:
 ```
-   source /opt/ros/foxy/setup.bash
-   ros2 topic echo /joint_states sensor_msgs/msg/JointState
+   $ source /opt/ros/foxy/setup.bash
+   $ ros2 topic echo /joint_states sensor_msgs/msg/JointState
 ```
 
 ***
