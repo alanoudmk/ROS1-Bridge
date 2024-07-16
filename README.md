@@ -223,7 +223,7 @@ we will be working on [Arduino Robot Arm](https://github.com/smart-methods/ardui
 ***
 
 
-# Running ROS 1 Bridge:
+## 3. Running ROS 1 Bridge:
 
 After launching the check_motors.launch file and have the robot arm running in ROS1, you need to set up the ros1_bridge and run it to ensure communication between ROS1 and ROS2.
 
