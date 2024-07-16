@@ -244,4 +244,42 @@ After launching the check_motors.launch file and have the robot arm running in R
    $ ros2 topic echo /joint_states sensor_msgs/msg/JointState
 ```
 
+****
+
+
+## 4. Summary:
+
+
+Terminal 1: Opening the _Robot Arm_ Package.
+   - Shows the user opening the Robot Arm package and launching the associated ROS1 nodes.
+
+<img src="https://github.com/user-attachments/assets/832876ce-eb16-40ef-aca7-ccca08c84c3c" width="350" height="230">
+
+<img src="https://github.com/user-attachments/assets/a676ef93-3e22-4b1c-adfa-2b6fac786f0e" width="600" height="230">
+
+
 ***
+
+Terminal 2: Inspecting Running Topics.
+   - Demonstrates the user checking the currently running ROS topics, then viewing the data being published on a specific _Joint State_ Topic in real-time.
+
+<img src="https://github.com/user-attachments/assets/885bd687-cd31-48e3-977f-71faf0db7504" width="350" height="230">
+
+
+
+***
+Terminal 3:  Running the Bridge.
+   - Shows the user launching the ROS Bridge, which acts as a intermediary between the ROS1 and ROS2 environments.
+
+<img src="https://github.com/user-attachments/assets/a3b27c1a-b34a-4999-9a75-67d562a5520b" width="420" height="230">
+
+
+***
+Terminal 4: Monitoring a ROS1 Topic from ROS2
+   - Illustrates the user successfully subscribing to a ROS1 topic and displaying the corresponding messages being published from the ROS2 system.
+
+<img src="https://github.com/user-attachments/assets/9d4a02f3-7e69-459e-b55c-5d5aeedbc9df" width="400" height="80">
+
+-
+
+<img src="https://github.com/user-attachments/assets/5fc153c6-4d19-43b7-9e52-bf67ce5d4a05" width="400" height="230">
