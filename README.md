@@ -95,7 +95,7 @@ The ``ros1_bridge`` package allows you to map topics, services, and actions betw
 # Arduino Robot Arm Project:
 we will be working on [Arduino Robot Arm](https://github.com/smart-methods/arduino_robot_arm).
 
-## 1. Install Arduino Robot Arm Aackage in ROS Noetic:
+## 1. Install Arduino Robot Arm Package in ROS Noetic:
 
 
 1. Open a **Terminal** & Source the ROS 1 Noetic: 
